@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <title>W3.CSS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/w3.css">
+  <body>
+      <div class="w3-top">
+        <ul class="w3-navbar w3-white w3-right-align w3-large">
+          <li>
+            <a href="http://www.amtc.cl" class="w3-margin-right">
+              <img src="images/AMTC-01.png" style="max-height:25px">
+            </a>
+          </img>
+          </li>
+          <li class="w3-right w3-hide-small"><a href="#">Link 3</a>
+          <li class="w3-right"><a href="#">Contact</a></li></li>
+          <li class="w3-right"><a href="#teams">Teams</a></li>
+          <li class="w3-right"><a href="#">Home</a></li>
+        </ul>
+      </div>
+    <div class="w3-content w3-section w3-display-container" style="width:100%">
+      <img class="mySlides w3-opacity-min" src="images/lab.png" style="width:100%">
+      <!--
+      <img class="mySlides" src="img_ny.jpg" style="width:100%">
+      <img class="mySlides" src="img_chicago.jpg" style="width:100%">
+      -->
+      <div class="w3-display-middle w3-xxlarge">
+        <p style="color:white">UChile Robotics Team</p>
+      </div>
+    </div>
+    <div class="w3-container w3-padding-64 w3-center" id="teams">
+      <h2>Teams</h2>
+      <p>Our current research teams for the RoboCup</p>
+      <div class="w3-row-padding w3-section">
+        <div class="w3-half">
+          <a href="http://uchilert.amtc.cl" style="text-decoration:none">
+            <div class="w3-card-8 w3-hover-opacity w3-center">
+              <img src="images/naos.png" class="w3-round w3-margin-bottom" alt="SPL Team" style="width:100%">
+              <div class="w3-container w3-center">
+                <p>SPL Team</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="w3-half">
+          <a href="http://bender.li2.uchile.cl" style="text-decoration:none">
+            <div class="w3-card-8 w3-hover-opacity w3-center">
+              <img src="images/bender.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width:100%">
+              <div class="w3-container w3-center">
+                <p>@Home Team</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script>
+      var myIndex = 0;
+      carousel();
+          
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}
+        x[myIndex-1].style.display = "block";
+        setTimeout(carousel, 4000); // Change image every 2 seconds
+      }
+    </script>
+  </body>
+</html>
