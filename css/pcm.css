@@ -1,0 +1,22 @@
+.pcm-cards {
+  position: relative;
+}
+
+.info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+}
+
+.pcm-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slide-images
+{
+  position: relative;
+}
