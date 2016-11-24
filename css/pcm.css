@@ -38,5 +38,6 @@ pcm-image{
 
 .slide-images
 {
+  overflow: hidden;
   position: relative;
 }
