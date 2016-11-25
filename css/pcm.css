@@ -11,6 +11,7 @@ pcm-image{
   position: absolute;
   bottom: 0;
   left: 0;
+  height: 80%;
   width: 100%;
   text-align: center;
   z-index: 10;
