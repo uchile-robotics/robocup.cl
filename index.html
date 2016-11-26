@@ -52,9 +52,9 @@
               <div class="w3-card-8 w3-center pcm-cards" id="naocard">
                 <div class="slide-images">
                   <div id="slidesnao">
-                    <img class="mySlides w3-center" src="images/naos/robocup_2014-crop2.png" style="width:100%"></img>
-                    <img class="mySlides w3-center" src="images/lab/lab-crop2.png" style="width:100%"></img>
-                    <img class="mySlides w3-center" src="images/naos/naos-crop.png" style="width:100%"></img>
+                    <img class="mySlides w3-center" src="images/naos/naos-slide.jpg" style="width:100%"></img>
+                    <img class="mySlides w3-center" src="images/naos/robocup_2014-slide.jpg" style="width:100%"></img>
+                    <img class="mySlides w3-center" src="images/lab/lab-slide.jpg" style="width:100%"></img>
                   </div>
                   <div class="info" id="naoinfo" style="height:80%">
                     <div class="w3-row w3-hide-small" style="height:100%">
@@ -87,9 +87,9 @@
               <div class="w3-card-8 w3-center pcm-cards" id="bendercard">
                 <div class="slide-images">
                   <div id="slidesbender">
-                    <img class="mySlides2 w3-center" src="images/bender/bender2.jpg" style="width:100%"></img>
-                    <img class="mySlides2 w3-center" src="images/bender/bender-crop.png" style="width:100%"></img>
-                    <!--<img src="images/bender/bender.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width:100%"></img>-->
+                    <img class="mySlides2 w3-center" src="images/bender/bender2-slide.jpg" style="width:100%"></img>
+                    <img class="mySlides2 w3-center" src="images/bender/bender1-slide.jpg" style="width:100%"></img>
+                    <img class="mySlides2 w3-center" src="images/bender/bender3-slide.jpg" style="width:100%"></img>
                   </div>
                   <div class="info" id="benderinfo" style="height:80%">
                     <div class="w3-row w3-hide-small" style="height:100%">
@@ -121,9 +121,9 @@
       </div>
       <!--End Teams-->
       <!-- Add Google Maps -->
-      <!--
+      
       <div id="googleMap" style="height:400px;"></div>
-      <script src="https://maps.googleapis.com/maps/api/js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwuK0xSWIjlejZ0-jQkCarevYH5nPJx-s"></script>
       <script>
         var myCenter = new google.maps.LatLng(-33.4584225, -70.6618641);
         
@@ -147,7 +147,7 @@
       
       google.maps.event.addDomListener(window, 'load', initialize);
         </script>
-       -->
+      
       <!--Footer-->
       <Footer>
         <div class="w3-container w3-light-grey w3-center" id="about">
@@ -162,7 +162,7 @@
                 <a href="http://www.amtc.cl"><img class="w3-image" src="images/logos/AMTC-01.png" style="margin-top:25%"></img></a>
               </div>
               <div class="w3-quarter">
-                <a href="http://www.explora.cl"><img class="w3-image" src="images/logos/Logoconicytgrande.jpg"></img></a>
+                <a href="http://www.explora.cl"><img class="w3-image" src="images/logos/Logoconicytgrande.png"></img></a>
               </div>
             </div>
           </div>
@@ -174,7 +174,7 @@
       </Footer>
     </div>
     <!--<script src="js/jquery-3.1.1.js"></script>-->
-    <script>
+    <script defer>
       var myIndex = 1;
       var myIndex2 = 1;
       var left = 0;
@@ -250,45 +250,29 @@
         left = (left + 1)%2;
         setTimeout(carousel, 4000);
       }
-    </script>
-    
-    <script>
+      </script>
+      <script defer>
       $(document).ready(function(){
         $(this).scrollTop(0);
         $("#naocard").mouseenter(function(){
-          $("#slidesnao").stop().animate( {opacity: 0.6}, {
-                                                     queue: false,
-                                                     duration: 1000,
-                                                     easing: "linear",
-                                                     done: function(){}
-                                                     } );
-          $("#naoinfo").stop().animate({height:"show",direction:"down"},{easing:"easeOutQuad",duration:1000,queue:false});
+          $("#slidesnao").stop().animate( {opacity: 0.6}, {queue: false, duration: 1000, easing: "linear"});
+          $("#naoinfo").stop().animate( {opacity: 0.7}, {queue: false, duration: 1000, easing: "linear"});
+          //$("#naoinfo").stop().animate({height:"show",direction:"down"},{easing:"easeOutQuad",duration:1000,queue:false});
         });
         $("#naocard").mouseleave(function(){
-          $("#slidesnao").stop().animate( {opacity: 1}, {
-                                                     queue: false,
-                                                     duration: 1000,
-                                                     easing: "linear",
-                                                     done: function(){}});
-                                 $("#naoinfo").stop().animate({height:"hide",direction:"down"},{easing:"easeOutQuad",duration:1000,queue:false});
+          $("#slidesnao").stop().animate( {opacity: 1}, {queue: false,duration: 1000, easing: "linear"});
+          $("#naoinfo").stop().animate( {opacity: 0}, {queue: false, duration: 1000, easing: "linear"});
+          //$("#naoinfo").stop().animate({height:"hide",direction:"down"},{easing:"easeOutQuad",duration:1000,queue:false});
         });
         $("#bendercard").mouseenter(function(){
-          $("#slidesbender").animate( {opacity: 0.6}, {
-                                                                                    queue: false,
-                                                                                    duration: 1000,
-                                                                                    easing: "linear",
-                                                                                    done: function(){}
-                                                                                    });
-          $("#benderinfo").stop().animate({height:"show",direction:"down"},{easing:"easeOutQuad",duration:1000,queue:false});
+          $("#slidesbender").animate( {opacity: 0.6}, { queue: false, duration: 1000, easing: "linear"});
+          $("#benderinfo").stop().animate( {opacity: 0.7}, {queue: false, duration: 1000, easing: "linear"});
+          //$("#benderinfo").stop().animate({height:"show",direction:"down"},{easing:"easeOutQuad",duration:1000,queue:false});
         });
         $("#bendercard").mouseleave(function(){
-                                    $("#slidesbender").animate( {opacity: 1}, {
-                                                                                    queue: false,
-                                                                                    duration: 1000,
-                                                                                    easing: "linear",
-                                                                                    done: function(){}
-                                                                                    });
-          $("#benderinfo").stop().animate({height:"hide",direction:"down"},{easing:"easeOutQuad",duration:1000,queue:false});
+          $("#slidesbender").animate( {opacity: 1}, {queue: false, duration: 1000, easing: "linear"});
+          $("#benderinfo").stop().animate( {opacity: 0}, {queue: false, duration: 1000, easing: "linear"});
+          //$("#benderinfo").stop().animate({height:"hide",direction:"down"},{easing:"easeOutQuad",duration:1000,queue:false});
         });
       });
     </script>

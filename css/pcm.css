@@ -11,16 +11,15 @@ pcm-image{
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 80%;
   width: 100%;
   text-align: center;
   z-index: 10;
   padding:0.01em 16px;
   color:#fff!important;
   background-color:#000!important;
-  opacity:0.60;filter:alpha(opacity=60);
+  opacity:0;filter:alpha(opacity=0);
   -webkit-backface-visibility:hidden;
-  display: none;
+  display: block;
 }
 
 .info-text{
@@ -39,6 +38,8 @@ pcm-image{
 
 .slide-images
 {
+  height: auto;
+  width: 100;
   overflow: hidden;
   position: relative;
 }
